@@ -17,10 +17,10 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 
 namespace FFBPluginGUI {
 
-	public ref class RoadFighters3DInput : Helper
+	public ref class DemulNascarInput : Helper
 	{
 	public:
-		RoadFighters3DInput(MetroForm ^obj1)
+		DemulNascarInput(MetroForm^ obj1)
 		{
 			this->obj = obj1;
 			this->InitializeComponent();
@@ -43,18 +43,14 @@ namespace FFBPluginGUI {
 			this->AutoAddShortTrackBarBlock("StepFFBStrength", L"Step FFB Strength", 0, 100, L"Set how far strength changes each button press");
 
 			this->AutoAddLongTextBox(L"Game Options", L"");
-			
+
 			this->AutoAddShortCheckBox("InputDeviceWheelEnable", L"Enable Input Support", L"");
-			this->AutoAddShortCheckBox("SequentialGears", L"Sequential Gears", L"Enable sequential gears");
 			this->AutoAddShortCheckBox("InputDeviceWheelReverseAxis", L"Reverse Pedal Axis", L"");
 			this->AutoAddShortCheckBox("InputDeviceCombinedPedals", L"Combined Pedals", L"Enable if using combined pedal axis");
-			this->AutoAddShortCheckBox("HackToSkipMenuError", L"Hack to skip error menu", L"");
-			this->AutoAddShortCheckBox("Only2D", L"2D Only", L"");
-			this->AutoAddShortCheckBox("HackToCloseLibmovieErrorAuto", L"Auto Close Libmovie Error", L"");
+			this->AutoAddShortCheckBox("AutoCloseWindowError", L"Auto close PadDemul Error", L"");
 
 			this->AutoAddShortTrackBarBlock("SteeringDeadzone", L"Steering Deadzone", 0, 100, L"Set steering deadzone to set deadzone on device");
 			this->AutoAddShortTrackBarBlock("PedalDeadzone", L"Pedal Deadzone", 0, 100, L"Set pedal deadzone to set deadzone on device");
-			this->AutoAddLongComboBoxBlock("CabinetID", "1|2|3|4", L"Cabinet ID", L"1|2|3|4", L"");
 
 			this->New2ColsPage();
 
@@ -73,41 +69,43 @@ namespace FFBPluginGUI {
 			this->AutoAddLongInputSelect("Button", "ServiceButton", L"Service Button");
 			this->AutoAddLongInputSelect("Button", "CreditButton", L"Credit Button");
 			this->AutoAddLongInputSelect("Button", "ViewButton", L"View Button");
-			this->AutoAddLongInputSelect("Button", "ThreeDimensionalButton", L"3D Button");
-			this->AutoAddLongInputSelect("Button", "leverUp", L"Lever Up");
-			this->AutoAddLongInputSelect("Button", "leverDown", L"Lever Down");
-			this->AutoAddLongInputSelect("Button", "leverLeft", L"Lever Left");
-			this->AutoAddLongInputSelect("Button", "leverRight", L"Lever Right");
+			this->AutoAddLongInputSelect("Button", "StartButton", L"Start Button");
+			this->AutoAddLongInputSelect("Button", "ShiftUp", L"Shift Up");
+			this->AutoAddLongInputSelect("Button", "ShiftDown", L"Shift Down");
+			this->AutoAddLongInputSelect("Button", "Gear1", L"Gear 1");
+			this->AutoAddLongInputSelect("Button", "Gear2", L"Gear 2");
+			this->AutoAddLongInputSelect("Button", "Gear3", L"Gear 3");
+			this->AutoAddLongInputSelect("Button", "Gear4", L"Gear 4");
 			this->AutoAddLongInputSelect("Button", "IncreaseFFBStrength", L"Increase FFB Strength");
 			this->AutoAddLongInputSelect("Button", "DecreaseFFBStrength", L"Decrease FFB Strength");
 			this->AutoAddLongInputSelect("Button", "ResetFFBStrength", L"Reset FFB Strength");
 
 			this->AutoAddShortComboBoxBlock(
 				"DpadUp",
-				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|ThreeDimensionalButton|leverUp|leverDown|leverLeft|leverRight|",
+				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|StartButton|ShiftUp|ShiftDown|",
 				L"Dpad Up",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press up on dpad on device 1"
 			);
 			this->AutoAddShortComboBoxBlock(
 				"DpadDown",
-				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|ThreeDimensionalButton|leverUp|leverDown|leverLeft|leverRight|",
+				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|StartButton|ShiftUp|ShiftDown|",
 				L"Dpad Down",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press down on dpad on device 1"
 			);
 			this->AutoAddShortComboBoxBlock(
 				"DpadLeft",
-				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|ThreeDimensionalButton|leverUp|leverDown|leverLeft|leverRight|",
+				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|StartButton|ShiftUp|ShiftDown|",
 				L"Dpad Left",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press left on dpad on device 1"
 			);
 			this->AutoAddShortComboBoxBlock(
 				"DpadRight",
-				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|ThreeDimensionalButton|leverUp|leverDown|leverLeft|leverRight|",
+				"ExitButton|TestButton|ServiceButton|CreditButton|ViewButton|StartButton|ShiftUp|ShiftDown|",
 				L"Dpad Right",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press right on dpad on device 1"
 			);
 
@@ -125,38 +123,40 @@ namespace FFBPluginGUI {
 			this->AutoAddLongInputSelect("Button", "ServiceButtonDevice2", L"Service Button");
 			this->AutoAddLongInputSelect("Button", "CreditButtonDevice2", L"Credit Button");
 			this->AutoAddLongInputSelect("Button", "ViewButtonDevice2", L"View Button");
-			this->AutoAddLongInputSelect("Button", "ThreeDimensionalButtonDevice2", L"3D Button");
-			this->AutoAddLongInputSelect("Button", "leverUpDevice2", L"Lever Up");
-			this->AutoAddLongInputSelect("Button", "leverDownDevice2", L"Lever Down");
-			this->AutoAddLongInputSelect("Button", "leverLeftDevice2", L"Lever Left");
-			this->AutoAddLongInputSelect("Button", "leverRightDevice2", L"Lever Right");
+			this->AutoAddLongInputSelect("Button", "StartButtonDevice2", L"Start Button");
+			this->AutoAddLongInputSelect("Button", "ShiftUpDevice2", L"Shift Up");
+			this->AutoAddLongInputSelect("Button", "ShiftDownDevice2", L"Shift Down");
+			this->AutoAddLongInputSelect("Button", "Gear1Device2", L"Gear 1");
+			this->AutoAddLongInputSelect("Button", "Gear2Device2", L"Gear 2");
+			this->AutoAddLongInputSelect("Button", "Gear3Device2", L"Gear 3");
+			this->AutoAddLongInputSelect("Button", "Gear4Device2", L"Gear 4");
 
 			this->AutoAddShortComboBoxBlock(
 				"DpadUpDevice2",
-				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|ThreeDimensionalButtonDevice2|leverUpDevice2|leverDownDevice2|leverLeftDevice2|leverRightDevice2|",
+				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|StartButtonDevice2|ShiftUpDevice2|ShiftDownDevice2|",
 				L"Dpad Up",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press up on dpad on device 2"
 			);
 			this->AutoAddShortComboBoxBlock(
 				"DpadDownDevice2",
-				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|ThreeDimensionalButtonDevice2|leverUpDevice2|leverDownDevice2|leverLeftDevice2|leverRightDevice2|",
+				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|StartButtonDevice2|ShiftUpDevice2|ShiftDownDevice2|",
 				L"Dpad Down",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press down on dpad on device 2"
 			);
 			this->AutoAddShortComboBoxBlock(
 				"DpadLeftDevice2",
-				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|ThreeDimensionalButtonDevice2|leverUpDevice2|leverDownDevice2|leverLeftDevice2|leverRightDevice2|",
+				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|StartButtonDevice2|ShiftUpDevice2|ShiftDownDevice2|",
 				L"Dpad Left",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press left on dpad on device 2"
 			);
 			this->AutoAddShortComboBoxBlock(
 				"DpadRightDevice2",
-				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|ThreeDimensionalButtonDevice2|leverUpDevice2|leverDownDevice2|leverLeftDevice2|leverRightDevice2|",
+				"ExitButtonDevice2|TestButtonDevice2|ServiceButtonDevice2|CreditButtonDevice2|ViewButtonDevice2|StartButtonDevice2|ShiftUpDevice2|ShiftDownDevice2|",
 				L"Dpad Right",
-				L"Exit Button|Test Button|Service Button|Credit Button|View Button|3D Button|lever Up|lever Down|lever Left|lever Right|Select no input",
+				L"Exit Button|Test Button|Service Button|Credit Button|View Button|Start Button|Shift Up|Shift Down|Select no input",
 				L"Choose what happens when you press right on dpad on device 2"
 			);
 

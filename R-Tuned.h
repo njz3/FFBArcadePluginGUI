@@ -17,10 +17,10 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 
 namespace FFBPluginGUI {
 
-	public ref class M2Emulator : Helper
+	public ref class RTuned : Helper
 	{
 	public:
-		M2Emulator(MetroForm^ obj1)
+		RTuned(MetroForm^ obj1)
 		{
 			this->obj = obj1;
 			this->InitializeComponent();
@@ -35,19 +35,12 @@ namespace FFBPluginGUI {
 			this->AutoAddComponent("FeedbackLength");
 
 			this->AutoAddComponent("CommonOptions");
-			this->AutoAddComponent("AlternativeFFB");
-			this->AutoAddComponent("PowerMode");
 
-			this->AutoAddLongTextBox(L"Force Spring Effect", L"Force Spring effect over using default game spring");
-
-			this->AutoAddShortCheckBox("EnableForceSpringEffect", L"Force Spring Effect", L"Forces spring effect to work all the time");
-			this->AutoAddShortTrackBarBlock("ForceSpringStrength", L"Forced Spring Strength", 0, 100, L"How strong the spring effect is when forced on");
+			this->AutoAddLongTrackBarBlock("SpringStrength", L"Spring Strength", 0, 100, L"Spring Strength for wheels only");
 
 			this->New2ColsPage();
 
 			this->AutoAddComponent("GlobalForce");
-
-			this->AutoAddComponent("AltGlobalForce");
 
 			this->Init();
 		}

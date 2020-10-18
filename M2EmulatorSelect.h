@@ -16,12 +16,12 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 #include "SDL.h"
 #include "Helper.h"
 
-#include "DaytonaUSA2.h"
-#include "DirtDevils.h"
-#include "EmergencyCallAmbulance.h"
-#include "LeMans24.h"
-#include "ScudRace.h"
-#include "SegaRally2.h"
+#include "DaytonaUSA.h"
+#include "Indy500.h"
+#include "SegaRally.h"
+#include "STCC.h"
+#include "SuperGT.h"
+#include "OverRev.h"
 
 namespace FFBPluginGUI {
 
@@ -33,12 +33,12 @@ namespace FFBPluginGUI {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for SupermodelSelect
+	/// Summary for M2EmulatorSelect
 	/// </summary>
-	public ref class SupermodelSelect : public MetroFramework::Forms::MetroForm
+	public ref class M2EmulatorSelect : public MetroFramework::Forms::MetroForm
 	{
 	public:
-		SupermodelSelect(void)
+		M2EmulatorSelect(void)
 		{
 			InitializeComponent();
 			//
@@ -57,7 +57,7 @@ namespace FFBPluginGUI {
 	public:
 
 		MetroForm^ obj;
-		SupermodelSelect(MetroForm^ obj1)
+		M2EmulatorSelect(MetroForm^ obj1)
 		{
 			obj = obj1;
 			InitializeComponent();
@@ -67,7 +67,7 @@ namespace FFBPluginGUI {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~SupermodelSelect()
+		~M2EmulatorSelect()
 		{
 			if (components)
 			{
@@ -122,9 +122,9 @@ namespace FFBPluginGUI {
 			this->metroButton1->Size = System::Drawing::Size(216, 23);
 			this->metroButton1->TabIndex = 0;
 			this->metroButton1->TabStop = false;
-			this->metroButton1->Text = L"Daytona USA 2";
+			this->metroButton1->Text = L"Daytona USA";
 			this->metroButton1->UseSelectable = true;
-			this->metroButton1->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroButton1_Click);
+			this->metroButton1->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroButton1_Click);
 			// 
 			// metroTextBox1
 			// 
@@ -160,7 +160,7 @@ namespace FFBPluginGUI {
 			this->metroTextBox1->WaterMarkColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(109)),
 				static_cast<System::Int32>(static_cast<System::Byte>(109)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
 			this->metroTextBox1->WaterMarkFont = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Pixel));
-			this->metroTextBox1->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroTextBox1_Click);
+			this->metroTextBox1->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroTextBox1_Click);
 			// 
 			// metroButton2
 			// 
@@ -169,9 +169,9 @@ namespace FFBPluginGUI {
 			this->metroButton2->Size = System::Drawing::Size(216, 23);
 			this->metroButton2->TabIndex = 4;
 			this->metroButton2->TabStop = false;
-			this->metroButton2->Text = L"Dirt Devils";
+			this->metroButton2->Text = L"Indy 500";
 			this->metroButton2->UseSelectable = true;
-			this->metroButton2->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroButton2_Click);
+			this->metroButton2->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroButton2_Click);
 			// 
 			// metroButton3
 			// 
@@ -180,9 +180,9 @@ namespace FFBPluginGUI {
 			this->metroButton3->Size = System::Drawing::Size(216, 23);
 			this->metroButton3->TabIndex = 5;
 			this->metroButton3->TabStop = false;
-			this->metroButton3->Text = L"Emergency Call Ambulance";
+			this->metroButton3->Text = L"Sega Rally";
 			this->metroButton3->UseSelectable = true;
-			this->metroButton3->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroButton3_Click);
+			this->metroButton3->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroButton3_Click);
 			// 
 			// metroButton4
 			// 
@@ -191,9 +191,9 @@ namespace FFBPluginGUI {
 			this->metroButton4->Size = System::Drawing::Size(216, 23);
 			this->metroButton4->TabIndex = 7;
 			this->metroButton4->TabStop = false;
-			this->metroButton4->Text = L"Le Mans 24";
+			this->metroButton4->Text = L"Sega Touring Car Championship";
 			this->metroButton4->UseSelectable = true;
-			this->metroButton4->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroButton4_Click);
+			this->metroButton4->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroButton4_Click);
 			// 
 			// metroButton5
 			// 
@@ -202,9 +202,9 @@ namespace FFBPluginGUI {
 			this->metroButton5->Size = System::Drawing::Size(216, 23);
 			this->metroButton5->TabIndex = 8;
 			this->metroButton5->TabStop = false;
-			this->metroButton5->Text = L"Scud Race";
+			this->metroButton5->Text = L"Super GT 24";
 			this->metroButton5->UseSelectable = true;
-			this->metroButton5->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroButton5_Click);
+			this->metroButton5->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroButton5_Click);
 			// 
 			// metroButton6
 			// 
@@ -213,9 +213,9 @@ namespace FFBPluginGUI {
 			this->metroButton6->Size = System::Drawing::Size(216, 23);
 			this->metroButton6->TabIndex = 9;
 			this->metroButton6->TabStop = false;
-			this->metroButton6->Text = L"Sega Rally 2";
+			this->metroButton6->Text = L"OverRev";
 			this->metroButton6->UseSelectable = true;
-			this->metroButton6->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroButton6_Click);
+			this->metroButton6->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroButton6_Click);
 			// 
 			// metroLink1
 			// 
@@ -226,7 +226,7 @@ namespace FFBPluginGUI {
 			this->metroLink1->TabStop = false;
 			this->metroLink1->Text = L"Go Back To Previous Menu";
 			this->metroLink1->UseSelectable = true;
-			this->metroLink1->Click += gcnew System::EventHandler(this, &SupermodelSelect::metroLink1_Click);
+			this->metroLink1->Click += gcnew System::EventHandler(this, &M2EmulatorSelect::metroLink1_Click);
 			// 
 			// metroTextBox2
 			// 
@@ -288,7 +288,7 @@ namespace FFBPluginGUI {
 			this->metroComboBox1->TabIndex = 3;
 			this->metroComboBox1->TabStop = false;
 			this->metroComboBox1->UseSelectable = true;
-			this->metroComboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &SupermodelSelect::metroComboBox1_SelectedIndexChanged);
+			this->metroComboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &M2EmulatorSelect::metroComboBox1_SelectedIndexChanged);
 			// 
 			// metroTextBox3
 			// 
@@ -337,7 +337,7 @@ namespace FFBPluginGUI {
 			this->metroCheckBox1->Checked = EnableRumbleA;
 			this->metroCheckBox1->Text = L"Enable Rumble";
 			this->metroCheckBox1->UseSelectable = true;
-			this->metroCheckBox1->CheckedChanged += gcnew System::EventHandler(this, &SupermodelSelect::metroCheckBox1_CheckedChanged);
+			this->metroCheckBox1->CheckedChanged += gcnew System::EventHandler(this, &M2EmulatorSelect::metroCheckBox1_CheckedChanged);
 			// 
 			// metroCheckBox2
 			// 
@@ -351,7 +351,7 @@ namespace FFBPluginGUI {
 			this->metroCheckBox2->Checked = ReverseRumbleA;
 			this->metroCheckBox2->Text = L"Reverse Rumble";
 			this->metroCheckBox2->UseSelectable = true;
-			this->metroCheckBox2->CheckedChanged += gcnew System::EventHandler(this, &SupermodelSelect::metroCheckBox2_CheckedChanged);
+			this->metroCheckBox2->CheckedChanged += gcnew System::EventHandler(this, &M2EmulatorSelect::metroCheckBox2_CheckedChanged);
 			// 
 			// metroCheckBox3
 			// 
@@ -365,7 +365,7 @@ namespace FFBPluginGUI {
 			this->metroCheckBox3->Checked = AlternativeFFBA;
 			this->metroCheckBox3->Text = L"Alternative FFB";
 			this->metroCheckBox3->UseSelectable = true;
-			this->metroCheckBox3->CheckedChanged += gcnew System::EventHandler(this, &SupermodelSelect::metroCheckBox3_CheckedChanged);
+			this->metroCheckBox3->CheckedChanged += gcnew System::EventHandler(this, &M2EmulatorSelect::metroCheckBox3_CheckedChanged);
 			// 
 			// metroCheckBox4
 			// 
@@ -379,7 +379,7 @@ namespace FFBPluginGUI {
 			this->metroCheckBox4->Checked = LoggingA;
 			this->metroCheckBox4->Text = L"Enable Logging";
 			this->metroCheckBox4->UseSelectable = true;
-			this->metroCheckBox4->CheckedChanged += gcnew System::EventHandler(this, &SupermodelSelect::metroCheckBox4_CheckedChanged);
+			this->metroCheckBox4->CheckedChanged += gcnew System::EventHandler(this, &M2EmulatorSelect::metroCheckBox4_CheckedChanged);
 			// 
 			// MameSelect
 			// 
@@ -400,9 +400,9 @@ namespace FFBPluginGUI {
 			this->Controls->Add(this->metroComboBox1);
 			this->Controls->Add(this->metroCheckBox1);
 			this->MaximizeBox = false;
-			this->Name = L"SupermodelSelect";
+			this->Name = L"M2EmulatorSelect";
 			this->Resizable = false;
-			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &SupermodelSelect::Form1_FormClosing);
+			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &M2EmulatorSelect::Form1_FormClosing);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -676,40 +676,40 @@ namespace FFBPluginGUI {
 	{
 
 	}
-	private: System::Void metroButton1_Click(System::Object^ sender, System::EventArgs^ e) //Daytona USA 2
+	private: System::Void metroButton1_Click(System::Object^ sender, System::EventArgs^ e) //Daytona USA
 	{
 		this->Hide();
-		DaytonaUSA2^ obj1 = gcnew DaytonaUSA2(this);
+		DaytonaUSA^ obj1 = gcnew DaytonaUSA(this);
 		obj1->ShowDialog();
 	}
-	private: System::Void metroButton2_Click(System::Object^ sender, System::EventArgs^ e) //Dirt Devils
+	private: System::Void metroButton2_Click(System::Object^ sender, System::EventArgs^ e) //Indy 500
 	{
 		this->Hide();
-		DirtDevils^ obj1 = gcnew DirtDevils(this);
+		Indy500^ obj1 = gcnew Indy500(this);
 		obj1->ShowDialog();
 	}
-	private: System::Void metroButton3_Click(System::Object^ sender, System::EventArgs^ e) //Emergency Call Ambulance
+	private: System::Void metroButton3_Click(System::Object^ sender, System::EventArgs^ e) //Sega Rally
 	{
 		this->Hide();
-		EmergencyCallAmbulance^ obj1 = gcnew EmergencyCallAmbulance(this);
+		SegaRally^ obj1 = gcnew SegaRally(this);
 		obj1->ShowDialog();
 	}
-	private: System::Void metroButton4_Click(System::Object^ sender, System::EventArgs^ e) //LeMans 24
+	private: System::Void metroButton4_Click(System::Object^ sender, System::EventArgs^ e) //STCC
 	{
 		this->Hide();
-		LeMans24^ obj1 = gcnew LeMans24(this);
+		STCC^ obj1 = gcnew STCC(this);
 		obj1->ShowDialog();
 	}
-	private: System::Void metroButton5_Click(System::Object^ sender, System::EventArgs^ e) //Scud Race
+	private: System::Void metroButton5_Click(System::Object^ sender, System::EventArgs^ e) //Super GT 24
 	{
 		this->Hide();
-		ScudRace^ obj1 = gcnew ScudRace(this);
+		SuperGT^ obj1 = gcnew SuperGT(this);
 		obj1->ShowDialog();
 	}
-	private: System::Void metroButton6_Click(System::Object^ sender, System::EventArgs^ e) //Sega Rally 2
+	private: System::Void metroButton6_Click(System::Object^ sender, System::EventArgs^ e) //OverRev
 	{
 		this->Hide();
-		SegaRally2^ obj1 = gcnew SegaRally2(this);
+		OverRev^ obj1 = gcnew OverRev(this);
 		obj1->ShowDialog();
 	}
 	};

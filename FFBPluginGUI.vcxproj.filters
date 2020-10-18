@@ -63,9 +63,6 @@
     <ClCompile Include="LGI3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="M2Emulator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Machstorm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -73,9 +70,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MKGP110.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NascarRacing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Outrun2.cpp">
@@ -306,6 +300,93 @@
     <ClCompile Include="Batman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="R_Tuned.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="M2EmulatorSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DaytonaUSA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Indy500.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OverRev.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SegaRally.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="STCC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperGT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RaveRacer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperChase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NascarRacing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SmashingDrive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialDDemul.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumSpeed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FasterThanSpeed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ATVTrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirtDash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AceDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AceDriverVictoryLap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulInputSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulInitialDInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulSmashingDriveInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulATVTrackInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulFasterThanSpeedInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulNascarInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemulMaximumSpeedInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StrengthInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleAxle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -356,9 +437,6 @@
     <ClInclude Include="LGI3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="M2Emulator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Machstorm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -366,9 +444,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MKGP110.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NascarRacing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Outrun2.h">
@@ -599,6 +674,93 @@
     <ClInclude Include="Batman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="R-Tuned.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="M2EmulatorSelect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DaytonaUSA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Indy500.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OverRev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SegaRally.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STCC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperGT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RaveRacer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperChase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulSelect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialDDemul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SmashingDrive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NascarRacing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSpeed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FasterThanSpeed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ATVTrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DirtDash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AceDriverVictoryLap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AceDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulInputSelect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulInitialDInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulSmashingDriveInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulATVTrackInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulFasterThanSpeedInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulNascarInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DemulMaximumSpeedInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StrengthInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleAxle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -606,6 +768,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FFBTest.resx">
       <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemulSelect.resx">
+      <Filter>Header Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemulInputSelect.resx">
+      <Filter>Header Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -20,7 +20,7 @@ namespace FFBPluginGUI {
 	public ref class NascarRacing : Helper
 	{
 	public:
-		NascarRacing(MetroForm ^obj1)
+		NascarRacing(MetroForm^ obj1)
 		{
 			this->obj = obj1;
 			this->InitializeComponent();
@@ -31,18 +31,27 @@ namespace FFBPluginGUI {
 		{
 			this->SuspendLayout();
 
-			this->AutoAddDevice1Selector();
-			this->AutoAddComponent("FeedbackLength");
+			this->AutoAddLongTextBox(L"Options", L"");
+			this->AutoAddShortCheckBox("PowerModeNascarRacing", L"Power Mode", L"Enable to raise strength of lower values");
 
-			this->AutoAddComponent("CommonOptions");
-			this->AutoAddComponent("AlternativeFFB");
-			this->AutoAddComponent("PowerMode");
+			this->AutoAddLongTrackBarBlock("FeedbackLengthNascarRacing", L"Feedback Length", 16, 1000, L"Length of a feedback command");
+
+			this->AutoAddLongTextBox(L"Force Spring Effect", L"Force Spring effect over using default game spring");
+
+			this->AutoAddShortCheckBox("EnableForceSpringEffectNascarRacing", L"Force Spring Effect", L"Forces spring effect to work all the time");
+			this->AutoAddShortTrackBarBlock("ForceSpringStrengthNascarRacing", L"Forced Spring Strength", 0, 100, L"How strong the spring effect is when forced on");
 
 			this->New2ColsPage();
 
-			this->AutoAddComponent("GlobalForce");
+			this->AutoAddComponent("GlobalForceHeader");
+			this->AutoAddShortTrackBarBlock("MinForceNascarRacing", L"Min Force", 0, 100, L"Minimum overrall force strength that will be applied to device");
+			this->AutoAddShortTrackBarBlock("MaxForceNascarRacing", L"Max Force", 0, 100, L"Maximum overrall force strength that will be applied to device");
 
-			this->AutoAddComponent("AltGlobalForce");
+			this->AutoAddComponent("AltGlobalForceHeader");
+			this->AutoAddShortTrackBarBlock("AlternativeMinForceLeftNascarRacing", L"Min Force Left", -100, 100, L"Minimum overrall left force strength that will be applied to device");
+			this->AutoAddShortTrackBarBlock("AlternativeMaxForceLeftNascarRacing", L"Max Force Left", -100, 100, L"Maximum overrall left force strength that will be applied to device");
+			this->AutoAddShortTrackBarBlock("AlternativeMinForceRightNascarRacing", L"Min Force Right", -100, 100, L"Minimum overrall right force strength that will be applied to device");
+			this->AutoAddShortTrackBarBlock("AlternativeMaxForceRightNascarRacing", L"Max Force Right", -100, 100, L"Maximum overrall right force strength that will be applied to device");
 
 			this->Init();
 		}
