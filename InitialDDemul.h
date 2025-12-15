@@ -33,8 +33,13 @@ namespace FFBPluginGUI {
 
 			this->AutoAddLongTextBox(L"Options", L"");
 			this->AutoAddShortCheckBox("PowerModeInitialDDemul", L"Power Mode", L"Enable to raise strength of lower values");
+			this->AutoAddShortCheckBox("DoubleSineInitialD", L"Double Sine", L"Enable to double strength of sine effect");
+			this->AutoAddShortCheckBox("DoubleConstantInitialD", L"Double Constant", L"Enable to double strength of constant effect");
+			this->AutoAddComponent("EnableDamperInitialDDemul");
 
-			this->AutoAddLongTrackBarBlock("FeedbackLengthInitialDDemul", L"Feedback Length", 16, 1000, L"Length of a feedback command");
+			this->AutoAddLongTrackBarBlock("DamperStrengthInitialDDemul", L"Damper Strength", 0, 100, L"Strength of damper effect to lower oscillation");
+
+			this->AutoAddLongTrackBarBlock("FeedbackLengthInitialDDemul", L"Feedback Length", 16, 10000, L"Length of a feedback command");
 
 			this->AutoAddLongTextBox(L"Force Spring Effect", L"Force Spring effect over using default game spring");
 

@@ -66,10 +66,10 @@
     <ClCompile Include="Machstorm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MKGP100.cpp">
+    <ClCompile Include="MKGP100Custom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MKGP110.cpp">
+    <ClCompile Include="MKGP110Custom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Outrun2.cpp">
@@ -126,10 +126,7 @@
     <ClCompile Include="HOTD4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GRID.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Mame.cpp">
+    <ClCompile Include="GRIDReal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InitialD0.cpp">
@@ -342,10 +339,10 @@
     <ClCompile Include="InitialDDemul.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MaximumSpeed.cpp">
+    <ClCompile Include="DemulMaximumSpeed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FasterThanSpeed.cpp">
+    <ClCompile Include="DemulFasterThanSpeed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ATVTrack.cpp">
@@ -385,6 +382,123 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DoubleAxle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HardDrivin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MKGPUSACustom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SWDC2018.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WMMT6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WMMT6R.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WMMT6RR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StormRacerG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialD0Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D1GPArcade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrazyTaxi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WMMT3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeadHeat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ElfLdr2Help.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GaelcoTuningRace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TokyoCop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RingRiders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastInitialD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastMaximumSpeed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastFasterThanSpeed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Flycast18Wheeler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastF355.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastEmulatorSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastClubKart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastKingOfRoute66.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlycastSegaDrivingSimulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DaytonaChampionshipUSANSE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MKGP118Real.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MKGPUSAReal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MKGP110Real.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GRIDCustom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MKGP118Custom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcticThunder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FNF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FNFDrift.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FNFSupercars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HummerExtreme.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrusnBlast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialDTheArcadev231.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WastelandRacers2071.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -440,10 +554,10 @@
     <ClInclude Include="Machstorm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MKGP100.h">
+    <ClInclude Include="MKGP100Custom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MKGP110.h">
+    <ClInclude Include="MKGP110Custom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Outrun2.h">
@@ -500,10 +614,7 @@
     <ClInclude Include="HOTD4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GRID.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mame.h">
+    <ClInclude Include="GRIDReal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InitialD0.h">
@@ -716,10 +827,10 @@
     <ClInclude Include="NascarRacing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MaximumSpeed.h">
+    <ClInclude Include="DemulMaximumSpeed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FasterThanSpeed.h">
+    <ClInclude Include="DemulFasterThanSpeed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ATVTrack.h">
@@ -761,6 +872,129 @@
     <ClInclude Include="DoubleAxle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HardDrivin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MKGPUSACustom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SWDC2018.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WMMT6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WMMT6R.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WMMT6RR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StormRacerG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialD0Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D1GPArcade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WMMT6Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrazyTaxi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WMMT3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeadHeat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ElfLdr2Help.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GaelcoTuningRace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TokyoCop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RingRiders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastEmulatorSelect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastInitialD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastFasterThanSpeed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastMaximumSpeed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Flycast18Wheeler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastF355.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastClubKart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastKingOfRoute66.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlycastSegaDrivingSimulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DaytonaChampionshipUSANSE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MKGP118Real.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MKGPUSAReal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MKGP110Real.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GRIDCustom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MKGP118Custom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArcticThunder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FNF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FNFDrift.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FNFSupercars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrusnBlast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HummerExtreme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialDTheArcadev231.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WastelandRacers2071.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -775,6 +1009,14 @@
     <EmbeddedResource Include="DemulInputSelect.resx">
       <Filter>Header Files</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="FlycastEmulatorSelect.resx">
+      <Filter>Header Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FFBPluginGUI.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -33,8 +33,16 @@ namespace FFBPluginGUI {
 
 			this->AutoAddLongTextBox(L"Options", L"");
 			this->AutoAddShortCheckBox("PowerModeDaytona2", L"Power Mode", L"Enable to raise strength of lower values");
+			this->AutoAddShortCheckBox("EnableDamperDaytona2", L"Enable Damper", L"Enable damper to lower wheel oscillation");
 
-			this->AutoAddLongTrackBarBlock("FeedbackLengthDaytona2", L"Feedback Length", 16, 1000, L"Length of a feedback command");
+			this->AutoAddLongTrackBarBlock("DamperStrengthDaytona2", L"Damper Strength", 0, 100, L"Strength of damper effect to lower oscillation");
+
+			this->AutoAddLongTrackBarBlock("FeedbackLengthDaytona2", L"Feedback Length", 16, 10000, L"Length of a feedback command");
+
+			this->AutoAddLongTextBox(L"Force Spring Effect", L"Force Spring effect over using default game spring");
+
+			this->AutoAddShortCheckBox("EnableForceSpringEffectDaytona2", L"Force Spring Effect", L"Forces spring effect to work all the time");
+			this->AutoAddShortTrackBarBlock("ForceSpringStrengthDaytona2", L"Forced Spring Strength", 0, 100, L"How strong the spring effect is when forced on");
 
 			this->New2ColsPage();
 

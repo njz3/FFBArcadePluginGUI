@@ -19,8 +19,8 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 #include "NascarRacing.h"
 #include "InitialDDemul.h"
 #include "SmashingDrive.h"
-#include "MaximumSpeed.h"
-#include "FasterThanSpeed.h"
+#include "DemulMaximumSpeed.h"
+#include "DemulFasterThanSpeed.h"
 #include "ATVTrack.h"
 
 namespace FFBPluginGUI {
@@ -697,13 +697,13 @@ namespace FFBPluginGUI {
 	private: System::Void metroButton4_Click(System::Object^ sender, System::EventArgs^ e) //Maximum Speed
 	{
 		this->Hide();
-		MaximumSpeed^ obj1 = gcnew MaximumSpeed(this);
+		DemulMaximumSpeed^ obj1 = gcnew DemulMaximumSpeed(this);
 		obj1->ShowDialog();
 	}
 	private: System::Void metroButton5_Click(System::Object^ sender, System::EventArgs^ e) //Faster Than Speed
 	{
 		this->Hide();
-		FasterThanSpeed^ obj1 = gcnew FasterThanSpeed(this);
+		DemulFasterThanSpeed^ obj1 = gcnew DemulFasterThanSpeed(this);
 		obj1->ShowDialog();
 	}
 	private: System::Void metroButton6_Click(System::Object^ sender, System::EventArgs^ e) //ATV Track

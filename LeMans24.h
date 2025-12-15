@@ -33,8 +33,16 @@ namespace FFBPluginGUI {
 
 			this->AutoAddLongTextBox(L"Options", L"");
 			this->AutoAddShortCheckBox("PowerModeLeMans", L"Power Mode", L"Enable to raise strength of lower values");
+			this->AutoAddShortCheckBox("EnableDamperLeMans", L"Enable Damper", L"Enable damper to lower wheel oscillation");
 
-			this->AutoAddLongTrackBarBlock("FeedbackLengthLeMans", L"Feedback Length", 16, 1000, L"Length of a feedback command");
+			this->AutoAddLongTrackBarBlock("DamperStrengthLeMans", L"Damper Strength", 0, 100, L"Strength of damper effect to lower oscillation");
+
+			this->AutoAddLongTrackBarBlock("FeedbackLengthLeMans", L"Feedback Length", 16, 10000, L"Length of a feedback command");
+
+			this->AutoAddLongTextBox(L"Force Spring Effect", L"Force Spring effect over using default game spring");
+
+			this->AutoAddShortCheckBox("EnableForceSpringEffectLeMans", L"Force Spring Effect", L"Forces spring effect to work all the time");
+			this->AutoAddShortTrackBarBlock("ForceSpringStrengthLeMans", L"Forced Spring Strength", 0, 100, L"How strong the spring effect is when forced on");
 
 			this->New2ColsPage();
 

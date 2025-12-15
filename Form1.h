@@ -16,32 +16,52 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 #include <string>
 #include "AliensExtermination.h"
 #include "AfterburnerClimax.h"
+#include "ArcticThunder.h"
 #include "Batman.h"
 #include "BG4.h"
 #include "ButtonRumble.h"
 #include "ButtonRumbleInput.h"
+#include "CrazyTaxi.h"
 #include "ChaseHQ2.h"
 #include "ChaseHQ2Input.h"
+#include "CrusnBlast.h"
+#include "D1GPArcade.h"
+#include "DaytonaChampionshipUSANSE.h"
 #include "DaytonaChampionshipUSA.h"
 #include "DaytonaChampionshipUSAInput.h"
+#include "DeadHeat.h"
 #include "DemulInputSelect.h"
 #include "DemulSelect.h"
 #include "DirtyDrivin.h"
+#include "ElfLdr2Help.h"
 #include "FFBTest.h"
+#include "FnF.h"
+#include "FnFDrift.h"
+#include "FnFSuperCars.h"
 #include "FordRacing.h"
+#include "FNF.h"
+#include "FNFDrift.h"
+#include "FNFSupercars.h"
+#include "FlycastEmulatorSelect.h"
+#include "GaelcoTuningRace.h"
 #include "GoldenGun.h"
-#include "GRID.h"
+#include "GRIDCustom.h"
+#include "GRIDReal.h"
 #include "GTIClub.h"
 #include "H2Overdrive.h"
 #include "Help.h"
+#include "HummerExtreme.h"
 #include "HOTD4.h"
+#include "HummerExtreme.h"
 #include "InitialD0.h"
+#include "InitialD0Input.h"
 #include "InitialD4.h"
 #include "InitialD4Japan.h"
 #include "InitialD5.h"
 #include "InitialD6.h"
 #include "InitialD7.h"
 #include "InitialD8.h"
+#include "InitialDTheArcadev231.h"
 #include "KODrive.h"
 #include "LGI.h"
 #include "LGI3D.h"
@@ -49,26 +69,40 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 #include "M2EmulatorSelect.h"
 #include "M2EmulatorInput.h"
 #include "Machstorm.h"
-#include "Mame.h"
 #include "MameSelect.h"
-#include "MKGP100.h"
-#include "MKGP110.h"
+#include "MKGP100Custom.h"
+#include "MKGP110Custom.h"
+#include "MKGP110Real.h"
+#include "MKGP118Custom.h"
+#include "MKGP118Real.h"
+#include "MKGPUSAReal.h"
+#include "MKGPUSACustom.h"
 #include "Outrun2.h"
 #include "Outrun2Input.h"
 #include "PokkenTournament.h"
+#include "RingRiders.h"
 #include "RoadFighters3D.h"
 #include "RoadFighters3DInput.h"
 #include "SegaRacingClassic.h"
 #include "SegaRally3.h"
 #include "SnoCross.h"
 #include "SonicAllStars.h"
+#include "StormRacerG.h"
 #include "StrengthInput.h"
 #include "SupermodelSelect.h"
+#include "SWDC2018.h"
 #include "WackyRaces.h"
+#include "WastelandRacers2071.h"
+#include "WMMT3.h"
 #include "WMMT5.h"
 #include "WMMT5Input.h"
+#include "WMMT6.h"
+#include "WMMT6Input.h"
+#include "WMMT6R.h"
+#include "WMMT6RR.h"
 #include "Rambo.h"
 #include "R-Tuned.h"
+#include "TokyoCop.h"
 #include "Transformers.h"
 
 namespace FFBPluginGUI {
@@ -258,7 +292,7 @@ namespace FFBPluginGUI {
 			SegaRally3^ obj1 = gcnew SegaRally3(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 7)
+		else if (GameSelect == 7 || GameSelect == 73)
 		{
 			this->Hide();
 			FordRacing^ obj1 = gcnew FordRacing(this);
@@ -270,7 +304,7 @@ namespace FFBPluginGUI {
 			InitialD6^ obj1 = gcnew InitialD6(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 9)
+		else if (GameSelect == 9 || GameSelect == 56 || GameSelect == 57)
 		{
 			this->Hide();
 			WMMT5^ obj1 = gcnew WMMT5(this);
@@ -279,13 +313,13 @@ namespace FFBPluginGUI {
 		else if (GameSelect == 10)
 		{
 			this->Hide();
-			GRID^ obj1 = gcnew GRID(this);
+			GRIDReal^ obj1 = gcnew GRIDReal(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 11)
 		{
 			this->Hide();
-			MKGP100^ obj1 = gcnew MKGP100(this);
+			MKGP100Custom^ obj1 = gcnew MKGP100Custom(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 12)
@@ -339,10 +373,10 @@ namespace FFBPluginGUI {
 		else if (GameSelect == 20)
 		{
 			this->Hide();
-			MKGP110^ obj1 = gcnew MKGP110(this);
+			MKGP110Custom^ obj1 = gcnew MKGP110Custom(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 21)
+		else if (GameSelect == 21 || GameSelect == 74)
 		{
 			this->Hide();
 			SonicAllStars^ obj1 = gcnew SonicAllStars(this);
@@ -408,16 +442,10 @@ namespace FFBPluginGUI {
 			LGI^ obj1 = gcnew LGI(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 32)
+		else if (GameSelect == 32 || GameSelect == 49 || GameSelect == 67)
 		{
 			this->Hide();
 			InitialD0^ obj1 = gcnew InitialD0(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 33)
-		{
-			this->Hide();
-			Mame^ obj1 = gcnew Mame(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 34)
@@ -504,6 +532,198 @@ namespace FFBPluginGUI {
 			SegaRally3^ obj1 = gcnew SegaRally3(this);
 			obj1->ShowDialog();
 		}
+		else if (GameSelect == 50)
+		{
+			this->Hide();
+			SWDC2018^ obj1 = gcnew SWDC2018(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 51)
+		{
+			this->Hide();
+			MKGPUSACustom^ obj1 = gcnew MKGPUSACustom(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 52)
+		{
+			this->Hide();
+			WMMT6^ obj1 = gcnew WMMT6(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 53)
+		{
+			this->Hide();
+			WMMT6R^ obj1 = gcnew WMMT6R(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 54)
+		{
+			this->Hide();
+			StormRacerG^ obj1 = gcnew StormRacerG(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 55)
+		{
+			this->Hide();
+			D1GPArcade^ obj1 = gcnew D1GPArcade(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 58)
+		{
+			this->Hide();
+			CrazyTaxi^ obj1 = gcnew CrazyTaxi(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 59)
+		{
+			this->Hide();
+			DaytonaChampionshipUSANSE^ obj1 = gcnew DaytonaChampionshipUSANSE(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 60)
+		{
+			this->Hide();
+			FlycastEmulatorSelect^ obj1 = gcnew FlycastEmulatorSelect(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 61)
+		{
+			this->Hide();
+			WMMT3^ obj1 = gcnew WMMT3(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 62 || GameSelect == 63)
+		{
+			this->Hide();
+			DeadHeat^ obj1 = gcnew DeadHeat(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 64)
+		{
+			this->Hide();
+			GaelcoTuningRace^ obj1 = gcnew GaelcoTuningRace(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 65)
+		{
+			this->Hide();
+			TokyoCop^ obj1 = gcnew TokyoCop(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 66)
+		{
+			this->Hide();
+			RingRiders^ obj1 = gcnew RingRiders(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 68)
+		{
+			this->Hide();
+			MKGP118Real^ obj1 = gcnew MKGP118Real(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 69)
+		{
+			this->Hide();
+			MKGP110Real^ obj1 = gcnew MKGP110Real(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 70)
+		{
+			this->Hide();
+			MKGPUSAReal^ obj1 = gcnew MKGPUSAReal(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 71)
+		{
+			this->Hide();
+			GRIDCustom^ obj1 = gcnew GRIDCustom(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 72)
+		{
+			this->Hide();
+			MKGP118Custom^ obj1 = gcnew MKGP118Custom(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 75)
+		{
+			this->Hide();
+			ArcticThunder^ obj1 = gcnew ArcticThunder(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 76)
+		{
+			this->Hide();
+			CrusnBlast^ obj1 = gcnew CrusnBlast(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 77)
+		{
+			this->Hide();
+			FNF^ obj1 = gcnew FNF(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 78)
+		{
+			this->Hide();
+			FNFDrift^ obj1 = gcnew FNFDrift(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 79)
+		{
+			this->Hide();
+			FNFSupercars^ obj1 = gcnew FNFSupercars(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 81)
+		{
+			this->Hide();
+			HummerExtreme^ obj1 = gcnew HummerExtreme(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 82)
+		{
+			this->Hide();
+			InitialDTAv231^ obj1 = gcnew InitialDTAv231(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 83)
+		{
+			this->Hide();
+			WastelandRacers2071^ obj1 = gcnew WastelandRacers2071(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 84)
+		{
+			this->Hide();
+			WMMT6RR^ obj1 = gcnew WMMT6RR(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 77)
+		{
+			this->Hide();
+			FnF^ obj1 = gcnew FnF(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 78)
+		{
+			this->Hide();
+			FnFDrift^ obj1 = gcnew FnFDrift(this);
+			obj1->ShowDialog();
+		}
+		else if (GameSelect == 79)
+		{
+			this->Hide();
+			FnFSuperCars^ obj1 = gcnew FnFSuperCars(this);
+			obj1->ShowDialog();
+		}
+		else if(GameSelect == 81)
+		{
+			this->Hide();
+			HummerExtreme^ obj1 = gcnew HummerExtreme(this);
+			obj1->ShowDialog();
+		} 
 		else
 		{
 			MessageBox::Show("FFBPlugin.ini does not contain GameId or does not exist");
@@ -518,7 +738,12 @@ namespace FFBPluginGUI {
 			DaytonaChampionshipUSAInput^ obj1 = gcnew DaytonaChampionshipUSAInput(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 2)
+		else if (GameSelect == 2 || GameSelect == 4 || GameSelect == 5 || GameSelect == 6 || GameSelect == 7 || GameSelect == 8 || GameSelect == 10 || GameSelect == 11 || GameSelect == 13 || GameSelect == 14 || GameSelect == 15 || GameSelect == 16 ||
+			GameSelect == 17 || GameSelect == 18 || GameSelect == 19 || GameSelect == 20 || GameSelect == 21 || GameSelect == 22 || GameSelect == 23 || GameSelect == 24 || GameSelect == 27 || GameSelect == 30 || GameSelect == 31  || GameSelect == 33 || 
+			GameSelect == 34 || GameSelect == 36 || GameSelect == 37 || GameSelect == 38 || GameSelect == 39 || GameSelect == 40 || GameSelect == 41 || GameSelect == 42 || GameSelect == 43 || GameSelect == 44 || GameSelect == 45 || GameSelect == 46 || 
+			GameSelect == 47 || GameSelect == 50 || GameSelect == 51 || GameSelect == 53 || GameSelect == 54 || GameSelect == 55 || GameSelect == 56 || GameSelect == 57 || GameSelect == 58 || GameSelect == 59 || GameSelect == 60 || GameSelect == 61 || 
+			GameSelect == 62 || GameSelect == 63 || GameSelect == 64 || GameSelect == 65 || GameSelect == 66 || GameSelect == 68 || GameSelect == 69 || GameSelect == 70 || GameSelect == 71 || GameSelect == 72 || GameSelect == 73 || GameSelect == 74 ||
+			GameSelect == 75 || GameSelect == 76 || GameSelect == 77 || GameSelect == 78 || GameSelect == 79 || GameSelect == 81 || GameSelect == 82 || GameSelect == 83 || GameSelect == 84)
 		{
 			this->Hide();
 			StrengthInput^ obj1 = gcnew StrengthInput(this);
@@ -530,130 +755,16 @@ namespace FFBPluginGUI {
 			ChaseHQ2Input^ obj1 = gcnew ChaseHQ2Input(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 4)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 5)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 6)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 7)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 8)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
 		else if (GameSelect == 9)
 		{
 			this->Hide();
 			WMMT5Input^ obj1 = gcnew WMMT5Input(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 10)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 11)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
 		else if (GameSelect == 12)
 		{
 			this->Hide();
 			Outrun2Input^ obj1 = gcnew Outrun2Input(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 13)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 14)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 15)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 16)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 17)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 18)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 19)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 20)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 21)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 22)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 23)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 24)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 25)
@@ -668,12 +779,6 @@ namespace FFBPluginGUI {
 			DemulInputSelect^ obj1 = gcnew DemulInputSelect(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 27)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
 		else if (GameSelect == 28)
 		{
 			this->Hide();
@@ -686,34 +791,10 @@ namespace FFBPluginGUI {
 			RoadFighters3DInput^ obj1 = gcnew RoadFighters3DInput(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 30)
+		else if (GameSelect == 32 || GameSelect == 49 || GameSelect == 67)
 		{
 			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 31)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 32)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 33)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 34)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
+			InitialD0Input^ obj1 = gcnew InitialD0Input(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 35)
@@ -722,76 +803,10 @@ namespace FFBPluginGUI {
 			Outrun2Input^ obj1 = gcnew Outrun2Input(this);
 			obj1->ShowDialog();
 		}
-		else if (GameSelect == 36)
+		else if (GameSelect == 52)
 		{
 			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 37)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 38)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 39)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 40)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 41)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 42)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 43)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 44)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 45)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 46)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
-			obj1->ShowDialog();
-		}
-		else if (GameSelect == 47)
-		{
-			this->Hide();
-			StrengthInput^ obj1 = gcnew StrengthInput(this);
+			WMMT6Input^ obj1 = gcnew WMMT6Input(this);
 			obj1->ShowDialog();
 		}
 		else
@@ -808,16 +823,24 @@ namespace FFBPluginGUI {
 	private: System::Void metroButton4_Click(System::Object^ sender, System::EventArgs^ e) //Help
 	{
 		int GameSelect = GetPrivateProfileInt(TEXT("Settings"), TEXT("GameId"), 0, TEXT(".\\FFBPlugin.ini"));
-		if (GameSelect == 4 || GameSelect == 12 || GameSelect == 15 || GameSelect == 16 || GameSelect == 23 || GameSelect == 24 || GameSelect == 35 || GameSelect == 37 || GameSelect == 46)
+		if (GameSelect == 4 || GameSelect == 12 || GameSelect == 15 || GameSelect == 16 || GameSelect == 23 || GameSelect == 24 || GameSelect == 35 || GameSelect == 37 || GameSelect == 46 || GameSelect == 64 || GameSelect == 65)
 		{
 			this->Hide();
 			LindberghHelp^ obj1 = gcnew LindberghHelp(this);
 			obj1->ShowDialog();
 		}
+		else if (GameSelect == 61 || GameSelect == 62 || GameSelect == 63 || GameSelect == 66 || GameSelect == 76 || GameSelect == 81)
+		{
+			this->Hide();
+			ElfLdr2Help^ obj1 = gcnew ElfLdr2Help(this);
+			obj1->ShowDialog();
+		}
 		else if (GameSelect == 1 || GameSelect == 2 || GameSelect == 3 || GameSelect == 5 || GameSelect == 6 || GameSelect == 7 || GameSelect == 8 || GameSelect == 9 || GameSelect == 10 || GameSelect == 11 || GameSelect == 13 ||
 			GameSelect == 14 || GameSelect == 17 || GameSelect == 18 || GameSelect == 19 || GameSelect == 20 || GameSelect == 21 || GameSelect == 22 || GameSelect == 25 || GameSelect == 26 || GameSelect == 27 || GameSelect == 28 || 
 			GameSelect == 29 || GameSelect == 30 || GameSelect == 31 || GameSelect == 32 || GameSelect == 33 || GameSelect == 34 || GameSelect == 36 || GameSelect == 38 || GameSelect == 39 || GameSelect == 40 || 
-			GameSelect == 41 || GameSelect == 42 || GameSelect == 43 || GameSelect == 44 || GameSelect == 45 || GameSelect == 47)
+			GameSelect == 41 || GameSelect == 42 || GameSelect == 43 || GameSelect == 44 || GameSelect == 45 || GameSelect == 47 || GameSelect == 49 || GameSelect == 50 || GameSelect == 51 || GameSelect == 52 || GameSelect == 53 || 
+			GameSelect == 54 || GameSelect == 55 || GameSelect == 56 || GameSelect == 57 || GameSelect == 58 || GameSelect == 59 || GameSelect == 60 || GameSelect == 67 || GameSelect == 68 || GameSelect == 69 || GameSelect == 70 ||
+			GameSelect == 71 || GameSelect == 72 || GameSelect == 73 || GameSelect == 74 || GameSelect == 75 || GameSelect == 77 || GameSelect == 78 || GameSelect == 79 || GameSelect == 82 || GameSelect == 83 || GameSelect == 84)
 		{
 			this->Hide();
 			Help^ obj1 = gcnew Help(this);

@@ -33,8 +33,11 @@ namespace FFBPluginGUI {
 
 			this->AutoAddLongTextBox(L"Options", L"");
 			this->AutoAddShortCheckBox("PowerModeAceDriverVictory", L"Power Mode", L"Enable to raise strength of lower values");
+			this->AutoAddShortCheckBox("EnableDamperAceDriverVictory", L"Enable Damper", L"Enable damper to lower wheel oscillation");
 
-			this->AutoAddLongTrackBarBlock("FeedbackLengthAceDriverVictory", L"Feedback Length", 16, 1000, L"Length of a feedback command");
+			this->AutoAddLongTrackBarBlock("DamperStrengthAceDriverVictory", L"Damper Strength", 0, 100, L"Strength of damper effect to lower oscillation");
+
+			this->AutoAddLongTrackBarBlock("FeedbackLengthAceDriverVictory", L"Feedback Length", 16, 10000, L"Length of a feedback command");
 
 			this->AutoAddLongTextBox(L"Force Spring Effect", L"Force Spring effect over using default game spring");
 

@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{44AC4452-68DE-487C-B9E5-7B795F8E7461}</ProjectGuid>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>FFBPluginGUI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -30,28 +30,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -96,7 +96,7 @@
       <CompileAsManaged>true</CompileAsManaged>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>Shell32.lib</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
@@ -108,7 +108,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>Shell32.lib</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -118,19 +118,24 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <CompileAsManaged>true</CompileAsManaged>
+      <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>Shell32.lib</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Workspace\Projects\wmmt6rr\FFBArcadePluginGUI\Includes\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>Shell32.lib</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
@@ -155,9 +160,15 @@
     <ClCompile Include="AceDriver.cpp" />
     <ClCompile Include="AceDriverVictoryLap.cpp" />
     <ClCompile Include="AfterburnerClimax.cpp" />
+    <ClCompile Include="ArcticThunder.cpp" />
     <ClCompile Include="ATVTrack.cpp" />
     <ClCompile Include="Batman.cpp" />
+    <ClCompile Include="CrazyTaxi.cpp" />
+    <ClCompile Include="CrusnBlast.cpp" />
+    <ClCompile Include="D1GPArcade.cpp" />
+    <ClCompile Include="DaytonaChampionshipUSANSE.cpp" />
     <ClCompile Include="DaytonaUSA.cpp" />
+    <ClCompile Include="DeadHeat.cpp" />
     <ClCompile Include="DemulATVTrackInput.cpp" />
     <ClCompile Include="DemulFasterThanSpeedInput.cpp" />
     <ClCompile Include="DemulInitialDInput.cpp" />
@@ -168,12 +179,31 @@
     <ClCompile Include="DemulSmashingDriveInput.cpp" />
     <ClCompile Include="DirtDash.cpp" />
     <ClCompile Include="DoubleAxle.cpp" />
-    <ClCompile Include="FasterThanSpeed.cpp" />
+    <ClCompile Include="ElfLdr2Help.cpp" />
+    <ClCompile Include="DemulFasterThanSpeed.cpp" />
+    <ClCompile Include="Flycast18Wheeler.cpp" />
+    <ClCompile Include="FlycastClubKart.cpp" />
+    <ClCompile Include="FlycastEmulatorSelect.cpp" />
+    <ClCompile Include="FlycastF355.cpp" />
+    <ClCompile Include="FlycastFasterThanSpeed.cpp" />
+    <ClCompile Include="FlycastInitialD.cpp" />
+    <ClCompile Include="FlycastKingOfRoute66.cpp" />
+    <ClCompile Include="FlycastMaximumSpeed.cpp" />
+    <ClCompile Include="FlycastSegaDrivingSimulator.cpp" />
+    <ClCompile Include="FNF.cpp" />
+    <ClCompile Include="FNFDrift.cpp" />
+    <ClCompile Include="FNFSupercars.cpp" />
+    <ClCompile Include="GaelcoTuningRace.cpp" />
+    <ClCompile Include="GRIDCustom.cpp" />
     <ClCompile Include="H2Overdrive.cpp" />
+    <ClCompile Include="HardDrivin.cpp" />
     <ClCompile Include="Help.cpp" />
+    <ClCompile Include="HummerExtreme.cpp" />
     <ClCompile Include="Hyperdrive.cpp" />
+    <ClCompile Include="InitialD0Input.cpp" />
     <ClCompile Include="Indy500.cpp" />
     <ClCompile Include="InitialDDemul.cpp" />
+    <ClCompile Include="InitialDTheArcadev231.cpp" />
     <ClCompile Include="LindberghHelp.cpp" />
     <ClCompile Include="AfterburnerII.cpp" />
     <ClCompile Include="Alien3.cpp" />
@@ -202,7 +232,7 @@
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="GhoulPanic.cpp" />
     <ClCompile Include="GoldenGun.cpp" />
-    <ClCompile Include="GRID.cpp" />
+    <ClCompile Include="GRIDReal.cpp" />
     <ClCompile Include="GTIClub.cpp" />
     <ClCompile Include="GunBuster.cpp" />
     <ClCompile Include="Helper.cpp" />
@@ -222,12 +252,16 @@
     <ClCompile Include="M2EmulatorInput.cpp" />
     <ClCompile Include="M2EmulatorSelect.cpp" />
     <ClCompile Include="Machstorm.cpp" />
-    <ClCompile Include="Mame.cpp" />
     <ClCompile Include="MameSelect.cpp" />
-    <ClCompile Include="MaximumSpeed.cpp" />
+    <ClCompile Include="DemulMaximumSpeed.cpp" />
     <ClCompile Include="MechanizedAttack.cpp" />
-    <ClCompile Include="MKGP100.cpp" />
-    <ClCompile Include="MKGP110.cpp" />
+    <ClCompile Include="MKGP100Custom.cpp" />
+    <ClCompile Include="MKGP110Custom.cpp" />
+    <ClCompile Include="MKGP110Real.cpp" />
+    <ClCompile Include="MKGP118Custom.cpp" />
+    <ClCompile Include="MKGP118Real.cpp" />
+    <ClCompile Include="MKGPUSACustom.cpp" />
+    <ClCompile Include="MKGPUSAReal.cpp" />
     <ClCompile Include="NascarRacing.cpp" />
     <ClCompile Include="OffRoadChallenge.cpp" />
     <ClCompile Include="OperationThunderbolt.cpp" />
@@ -244,6 +278,7 @@
     <ClCompile Include="Rambo.cpp" />
     <ClCompile Include="RaveRacer.cpp" />
     <ClCompile Include="RevolutionX.cpp" />
+    <ClCompile Include="RingRiders.cpp" />
     <ClCompile Include="RoadFighters3D.cpp" />
     <ClCompile Include="RoadFighters3DInput.cpp" />
     <ClCompile Include="R_Tuned.cpp" />
@@ -260,12 +295,15 @@
     <ClCompile Include="SonicAllStars.cpp" />
     <ClCompile Include="Spacegun.cpp" />
     <ClCompile Include="STCC.cpp" />
+    <ClCompile Include="StormRacerG.cpp" />
     <ClCompile Include="StrengthInput.cpp" />
     <ClCompile Include="SuperChase.cpp" />
     <ClCompile Include="SuperGT.cpp" />
     <ClCompile Include="SupermodelSelect.cpp" />
+    <ClCompile Include="SWDC2018.cpp" />
     <ClCompile Include="Terminator2.cpp" />
     <ClCompile Include="TimeCrisis.cpp" />
+    <ClCompile Include="TokyoCop.cpp" />
     <ClCompile Include="Transformers.cpp" />
     <ClCompile Include="TurboOutrun.cpp" />
     <ClCompile Include="TurkeyShoot.cpp" />
@@ -273,8 +311,13 @@
     <ClCompile Include="VaporTrx.cpp" />
     <ClCompile Include="VirtuaRacing.cpp" />
     <ClCompile Include="WackyRaces.cpp" />
+    <ClCompile Include="WastelandRacers2071.cpp" />
+    <ClCompile Include="WMMT3.cpp" />
     <ClCompile Include="WMMT5.cpp" />
     <ClCompile Include="WMMT5Input.cpp" />
+    <ClCompile Include="WMMT6.cpp" />
+    <ClCompile Include="WMMT6R.cpp" />
+    <ClCompile Include="WMMT6RR.cpp" />
     <ClCompile Include="ZombieRaid.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -282,9 +325,15 @@
     <ClInclude Include="AfterburnerClimax.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
+    <ClInclude Include="ArcticThunder.h" />
     <ClInclude Include="ATVTrack.h" />
     <ClInclude Include="Batman.h" />
+    <ClInclude Include="CrazyTaxi.h" />
+    <ClInclude Include="CrusnBlast.h" />
+    <ClInclude Include="D1GPArcade.h" />
+    <ClInclude Include="DaytonaChampionshipUSANSE.h" />
     <ClInclude Include="DaytonaUSA.h" />
+    <ClInclude Include="DeadHeat.h" />
     <ClInclude Include="DemulATVTrackInput.h" />
     <ClInclude Include="DemulFasterThanSpeedInput.h" />
     <ClInclude Include="DemulInitialDInput.h" />
@@ -299,14 +348,35 @@
     <ClInclude Include="DemulSmashingDriveInput.h" />
     <ClInclude Include="DirtDash.h" />
     <ClInclude Include="DoubleAxle.h" />
-    <ClInclude Include="FasterThanSpeed.h" />
+    <ClInclude Include="ElfLdr2Help.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="DemulFasterThanSpeed.h" />
+    <ClInclude Include="Flycast18Wheeler.h" />
+    <ClInclude Include="FlycastClubKart.h" />
+    <ClInclude Include="FlycastEmulatorSelect.h" />
+    <ClInclude Include="FlycastF355.h" />
+    <ClInclude Include="FlycastFasterThanSpeed.h" />
+    <ClInclude Include="FlycastInitialD.h" />
+    <ClInclude Include="FlycastKingOfRoute66.h" />
+    <ClInclude Include="FlycastMaximumSpeed.h" />
+    <ClInclude Include="FlycastSegaDrivingSimulator.h" />
+    <ClInclude Include="FNF.h" />
+    <ClInclude Include="FNFDrift.h" />
+    <ClInclude Include="FNFSupercars.h" />
+    <ClInclude Include="GaelcoTuningRace.h" />
+    <ClInclude Include="GRIDCustom.h" />
     <ClInclude Include="H2Overdrive.h" />
+    <ClInclude Include="HardDrivin.h" />
     <ClInclude Include="Help.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="HummerExtreme.h" />
     <ClInclude Include="Hyperdrive.h" />
+    <ClInclude Include="InitialD0Input.h" />
     <ClInclude Include="Indy500.h" />
     <ClInclude Include="InitialDDemul.h" />
+    <ClInclude Include="InitialDTheArcadev231.h" />
     <ClInclude Include="LindberghHelp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -355,7 +425,7 @@
     </ClInclude>
     <ClInclude Include="GhoulPanic.h" />
     <ClInclude Include="GoldenGun.h" />
-    <ClInclude Include="GRID.h" />
+    <ClInclude Include="GRIDReal.h" />
     <ClInclude Include="GTIClub.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
@@ -401,20 +471,22 @@
     <ClInclude Include="Machstorm.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
-    <ClInclude Include="Mame.h">
-      <FileType>CppHeader</FileType>
-    </ClInclude>
     <ClInclude Include="MameSelect.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MaximumSpeed.h" />
+    <ClInclude Include="DemulMaximumSpeed.h" />
     <ClInclude Include="MechanizedAttack.h" />
-    <ClInclude Include="MKGP100.h">
+    <ClInclude Include="MKGP100Custom.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
-    <ClInclude Include="MKGP110.h">
+    <ClInclude Include="MKGP110Custom.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
+    <ClInclude Include="MKGP110Real.h" />
+    <ClInclude Include="MKGP118Custom.h" />
+    <ClInclude Include="MKGP118Real.h" />
+    <ClInclude Include="MKGPUSACustom.h" />
+    <ClInclude Include="MKGPUSAReal.h" />
     <ClInclude Include="NascarRacing.h" />
     <ClInclude Include="OffRoadChallenge.h" />
     <ClInclude Include="OperationThunderbolt.h" />
@@ -437,7 +509,9 @@
     <ClInclude Include="RailChase.h" />
     <ClInclude Include="Rambo.h" />
     <ClInclude Include="RaveRacer.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="RevolutionX.h" />
+    <ClInclude Include="RingRiders.h" />
     <ClInclude Include="RoadFighters3D.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
@@ -463,14 +537,17 @@
     </ClInclude>
     <ClInclude Include="Spacegun.h" />
     <ClInclude Include="STCC.h" />
+    <ClInclude Include="StormRacerG.h" />
     <ClInclude Include="StrengthInput.h" />
     <ClInclude Include="SuperChase.h" />
     <ClInclude Include="SuperGT.h" />
     <ClInclude Include="SupermodelSelect.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SWDC2018.h" />
     <ClInclude Include="Terminator2.h" />
     <ClInclude Include="TimeCrisis.h" />
+    <ClInclude Include="TokyoCop.h" />
     <ClInclude Include="Transformers.h" />
     <ClInclude Include="TurboOutrun.h" />
     <ClInclude Include="TurkeyShoot.h" />
@@ -481,17 +558,29 @@
     <ClInclude Include="WackyRaces.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
+    <ClInclude Include="WastelandRacers2071.h" />
+    <ClInclude Include="WMMT3.h" />
     <ClInclude Include="WMMT5.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
     <ClInclude Include="WMMT5Input.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
+    <ClInclude Include="WMMT6.h" />
+    <ClInclude Include="WMMT6Input.h" />
+    <ClInclude Include="WMMT6R.h" />
+    <ClInclude Include="WMMT6RR.h" />
     <ClInclude Include="ZombieRaid.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DemulInputSelect.resx" />
     <EmbeddedResource Include="DemulSelect.resx" />
+    <EmbeddedResource Include="ElfLdr2Help.resx">
+      <DependentUpon>ElfLdr2Help.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlycastEmulatorSelect.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.h</DependentUpon>
     </EmbeddedResource>
@@ -516,18 +605,21 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="FFBPluginGUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="packages\sdl2.nuget.redist.2.0.9\build\native\sdl2.nuget.redist.targets" Condition="Exists('packages\sdl2.nuget.redist.2.0.9\build\native\sdl2.nuget.redist.targets')" />
-    <Import Project="packages\sdl2.nuget.2.0.9\build\native\sdl2.nuget.targets" Condition="Exists('packages\sdl2.nuget.2.0.9\build\native\sdl2.nuget.targets')" />
+    <Import Project="packages\sdl2.nuget.redist.2.28.5\build\native\sdl2.nuget.redist.targets" Condition="Exists('packages\sdl2.nuget.redist.2.28.5\build\native\sdl2.nuget.redist.targets')" />
+    <Import Project="packages\sdl2.nuget.2.28.5\build\native\sdl2.nuget.targets" Condition="Exists('packages\sdl2.nuget.2.28.5\build\native\sdl2.nuget.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\sdl2.nuget.redist.2.0.9\build\native\sdl2.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.nuget.redist.2.0.9\build\native\sdl2.nuget.redist.targets'))" />
-    <Error Condition="!Exists('packages\sdl2.nuget.2.0.9\build\native\sdl2.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.nuget.2.0.9\build\native\sdl2.nuget.targets'))" />
+    <Error Condition="!Exists('packages\sdl2.nuget.redist.2.28.5\build\native\sdl2.nuget.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.nuget.redist.2.28.5\build\native\sdl2.nuget.redist.targets'))" />
+    <Error Condition="!Exists('packages\sdl2.nuget.2.28.5\build\native\sdl2.nuget.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\sdl2.nuget.2.28.5\build\native\sdl2.nuget.targets'))" />
   </Target>
 </Project>
