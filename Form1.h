@@ -661,19 +661,19 @@ namespace FFBPluginGUI {
 		else if (GameSelect == 77)
 		{
 			this->Hide();
-			FNF^ obj1 = gcnew FNF(this);
+			FnF^ obj1 = gcnew FnF(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 78)
 		{
 			this->Hide();
-			FNFDrift^ obj1 = gcnew FNFDrift(this);
+			FnFDrift^ obj1 = gcnew FnFDrift(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 79)
 		{
 			this->Hide();
-			FNFSupercars^ obj1 = gcnew FNFSupercars(this);
+			FnFSuperCars^ obj1 = gcnew FnFSuperCars(this);
 			obj1->ShowDialog();
 		}
 		else if (GameSelect == 81)
